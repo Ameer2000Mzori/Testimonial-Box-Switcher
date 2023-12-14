@@ -6,6 +6,7 @@ var textImg = document.getElementsByClassName("text-Img")[0];
 var nameP = document.getElementsByClassName("name-P")[0];
 // gelobal variables
 var counter = 0;
+var indexCount = 0;
 // our Object Data
 var objectData = [
     {
@@ -35,7 +36,16 @@ var objectData = [
     },
 ];
 // our functions
+var startChange = function () {
+    setInterval(function () {
+        counter += 0.5;
+        console.log(counter);
+        timerEl.style.width = "".concat(counter, "%");
+        if (counter >= 100) {
+            counter = 0;
+        }
+    }, 25);
+};
+// startChange();
 // our eventlisnters
-window.addEventListener("load", function () {
-    console.log("hallo world");
-});
+window.addEventListener("load", function () { return startChange; });

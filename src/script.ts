@@ -1,12 +1,13 @@
 // selecting elements
-const rangeTimer = document.getElementsByClassName("range-Timer")[0];
-const timerEl = document.getElementsByClassName("timer-El")[0];
-const textH1 = document.getElementsByClassName("text-H1")[0];
-const textImg = document.getElementsByClassName("text-Img")[0];
-const nameP = document.getElementsByClassName("name-P")[0];
+const rangeTimer: any = document.getElementsByClassName("range-Timer")[0];
+const timerEl: any = document.getElementsByClassName("timer-El")[0];
+const textH1: any = document.getElementsByClassName("text-H1")[0];
+const textImg: any = document.getElementsByClassName("text-Img")[0];
+const nameP: any = document.getElementsByClassName("name-P")[0];
 
 // gelobal variables
 let counter = 0;
+let indexCount = 0;
 
 // our Object Data
 const objectData = [
@@ -38,8 +39,17 @@ const objectData = [
 ];
 
 // our functions
+const startChange = () => {
+  setInterval(() => {
+    counter += 0.5;
+    console.log(counter);
+    timerEl.style.width = `${counter}%`;
+    if (counter >= 100) {
+      counter = 0;
+    }
+  }, 25);
+};
+// startChange();
 
 // our eventlisnters
-window.addEventListener("load", () => {
-  console.log("hallo world");
-});
+window.addEventListener("load", () => startChange);
