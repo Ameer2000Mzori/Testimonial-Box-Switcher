@@ -39,7 +39,6 @@ var objectData = [
 var startChange = function () {
     setInterval(function () {
         counter += 0.5;
-        console.log(counter);
         timerEl.style.width = "".concat(counter, "%");
         if (counter >= 100) {
             counter = 0;
@@ -55,6 +54,7 @@ var displayData = function () {
     textH1.textContent = "".concat(counterObject.text);
     textImg.src = "".concat(counterObject.img);
 };
+// check if our indexcount is higher then data that we have
 var checkData = function () {
     if (indexCount >= objectData.length) {
         indexCount = 0;

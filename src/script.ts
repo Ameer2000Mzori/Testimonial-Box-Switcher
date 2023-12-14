@@ -42,7 +42,6 @@ const objectData = [
 const startChange = () => {
   setInterval(() => {
     counter += 0.5;
-    console.log(counter);
     timerEl.style.width = `${counter}%`;
     if (counter >= 100) {
       counter = 0;
@@ -60,6 +59,7 @@ const displayData = () => {
   textImg.src = `${counterObject.img}`;
 };
 
+// check if our indexcount is higher then data that we have
 const checkData = () => {
   if (indexCount >= objectData.length) {
     indexCount = 0;
