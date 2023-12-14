@@ -3,7 +3,66 @@
 $fontOne: "Roboto", sans-serif;
 $fontTwo: "Silkscreen", sans-serif;
 
+$colorOne: #ffb534;
+$colorTwo: #fbf6ee;
+$colorThree: #c1f2b0;
+$colorFour: #65b741;
+
 body {
   padding: 0;
   margin: 0;
+}
+
+.header {
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: $colorTwo;
+
+  h1 {
+    font-size: 15px;
+    max-width: 252px;
+  }
+
+  .head {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 560px;
+    width: 330px;
+    background-color: $colorOne;
+    border-radius: 15px;
+    padding: 5px;
+    filter: drop-shadow(0 0 5px $colorThree);
+    border: solid $colorOne 2px;
+
+    .range-Timer-Wrap {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      .range-Timer {
+        height: 20px;
+        width: 100%;
+        border-radius: 15px;
+        background-color: $colorThree;
+        border: solid $colorFour 2px;
+
+        .timer-El {
+          height: 100%;
+          width: 55%;
+          border-radius: 5px;
+          background-color: $colorFour;
+        }
+      }
+    }
+  }
 }

@@ -4,3 +4,57 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.header {
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf6ee;
+}
+
+.header h1 {
+  font-size: 15px;
+  max-width: 252px;
+}
+
+.header .head {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: 560px;
+  width: 330px;
+  background-color: #ffb534;
+  border-radius: 15px;
+  padding: 5px;
+  filter: drop-shadow(0 0 5px #c1f2b0);
+  border: solid #ffb534 2px;
+}
+
+.header .head .range-Timer-Wrap {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .head .range-Timer-Wrap .range-Timer {
+  height: 20px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #c1f2b0;
+  border: solid #65b741 2px;
+}
+
+.header .head .range-Timer-Wrap .range-Timer .timer-El {
+  height: 100%;
+  width: 55%;
+  border-radius: 5px;
+  background-color: #65b741;
+}
