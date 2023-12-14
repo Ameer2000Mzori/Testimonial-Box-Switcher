@@ -15,11 +15,6 @@ body {
   background-color: #fbf6ee;
 }
 
-.header h1 {
-  font-size: 15px;
-  max-width: 252px;
-}
-
 .header .head {
   display: flex;
   text-align: center;
@@ -57,4 +52,30 @@ body {
   width: 55%;
   border-radius: 5px;
   background-color: #65b741;
+}
+
+.header .head .text-Wrapper {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .head .text-Wrapper h1 {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  max-width: 90%;
+  height: 60%;
+  overflow-x: auto;
+  border: solid #fbf6ee 2px;
+  padding: 2px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

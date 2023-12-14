@@ -22,11 +22,6 @@ body {
   flex-direction: column;
   background-color: $colorTwo;
 
-  h1 {
-    font-size: 15px;
-    max-width: 252px;
-  }
-
   .head {
     display: flex;
     text-align: center;
@@ -62,6 +57,32 @@ body {
           border-radius: 5px;
           background-color: $colorFour;
         }
+      }
+    }
+
+    .text-Wrapper {
+      width: 100%;
+      height: 30%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 15px;
+        font-family: $fontOne;
+        font-weight: 600;
+        max-width: 90%;
+        height: 60%;
+        overflow-x: auto;
+        border: solid $colorTwo 2px;
+        padding: 2px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
