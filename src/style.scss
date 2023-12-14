@@ -85,5 +85,30 @@ body {
         justify-content: center;
       }
     }
+
+    .image-Name-Wrap {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      height: 20%;
+      width: 100%;
+
+      .text-Img {
+        height: 80%;
+        border-radius: 50%;
+      }
+
+      .name-Wrap {
+        p {
+          font-family: $fontOne;
+          font-size: 17px;
+          font-weight: 600;
+          color: white;
+        }
+      }
+    }
   }
 }

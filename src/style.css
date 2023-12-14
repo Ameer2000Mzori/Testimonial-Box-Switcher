@@ -79,3 +79,26 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.header .head .image-Name-Wrap {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 20%;
+  width: 100%;
+}
+
+.header .head .image-Name-Wrap .text-Img {
+  height: 80%;
+  border-radius: 50%;
+}
+
+.header .head .image-Name-Wrap .name-Wrap p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
