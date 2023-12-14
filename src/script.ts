@@ -1,9 +1,9 @@
 // selecting elements
-const rangeTimer: any = document.getElementsByClassName("range-Timer")[0];
+const rangeTimer = document.getElementsByClassName("range-Timer")[0];
 const timerEl: any = document.getElementsByClassName("timer-El")[0];
-const textH1: any = document.getElementsByClassName("text-H1")[0];
+const textH1 = document.getElementsByClassName("text-H1")[0];
 const textImg: any = document.getElementsByClassName("text-Img")[0];
-const nameP: any = document.getElementsByClassName("name-P")[0];
+const nameP = document.getElementsByClassName("name-P")[0];
 
 // gelobal variables
 let counter = 0;
@@ -46,10 +46,18 @@ const startChange = () => {
     timerEl.style.width = `${counter}%`;
     if (counter >= 100) {
       counter = 0;
+      indexCount += 1;
     }
   }, 25);
 };
-// startChange();
+
+// display our data function
+const displayData = () => {
+  let counterObject = objectData[indexCount];
+  nameP.textContent = `${counterObject.name}`;
+  textH1.textContent = `${counterObject.text}`;
+  textImg.src = `${counterObject.img}`;
+};
 
 // our eventlisnters
-window.addEventListener("load", () => startChange);
+// window.addEventListener("load", () => startChange());

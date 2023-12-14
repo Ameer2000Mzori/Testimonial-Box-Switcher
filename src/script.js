@@ -43,9 +43,16 @@ var startChange = function () {
         timerEl.style.width = "".concat(counter, "%");
         if (counter >= 100) {
             counter = 0;
+            indexCount += 1;
         }
     }, 25);
 };
-// startChange();
+// display our data function
+var displayData = function () {
+    var counterObject = objectData[indexCount];
+    nameP.textContent = "".concat(counterObject.name);
+    textH1.textContent = "".concat(counterObject.text);
+    textImg.src = "".concat(counterObject.img);
+};
 // our eventlisnters
-window.addEventListener("load", function () { return startChange; });
+// window.addEventListener("load", () => startChange());
