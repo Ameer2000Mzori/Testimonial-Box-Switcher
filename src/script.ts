@@ -12,7 +12,7 @@ let indexCount = 0;
 // our Object Data
 const objectData = [
   {
-    name: "Ameer Ameen",
+    name: "Jamal ",
     text: "IDHSDFOHJFPOSDFJEOIHJWEF",
     img: "https://randomuser.me/api/portraits/men/11.jpg",
   },
@@ -47,6 +47,7 @@ const startChange = () => {
     if (counter >= 100) {
       counter = 0;
       indexCount += 1;
+      checkData();
     }
   }, 25);
 };
@@ -59,5 +60,14 @@ const displayData = () => {
   textImg.src = `${counterObject.img}`;
 };
 
+const checkData = () => {
+  if (indexCount >= objectData.length) {
+    indexCount = 0;
+    displayData();
+  } else {
+    displayData();
+  }
+};
+
 // our eventlisnters
-// window.addEventListener("load", () => startChange());
+window.addEventListener("load", () => startChange());

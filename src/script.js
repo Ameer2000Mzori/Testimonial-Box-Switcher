@@ -10,7 +10,7 @@ var indexCount = 0;
 // our Object Data
 var objectData = [
     {
-        name: "Ameer Ameen",
+        name: "Jamal ",
         text: "IDHSDFOHJFPOSDFJEOIHJWEF",
         img: "https://randomuser.me/api/portraits/men/11.jpg",
     },
@@ -44,6 +44,7 @@ var startChange = function () {
         if (counter >= 100) {
             counter = 0;
             indexCount += 1;
+            checkData();
         }
     }, 25);
 };
@@ -54,5 +55,14 @@ var displayData = function () {
     textH1.textContent = "".concat(counterObject.text);
     textImg.src = "".concat(counterObject.img);
 };
+var checkData = function () {
+    if (indexCount >= objectData.length) {
+        indexCount = 0;
+        displayData();
+    }
+    else {
+        displayData();
+    }
+};
 // our eventlisnters
-// window.addEventListener("load", () => startChange());
+window.addEventListener("load", function () { return startChange(); });
